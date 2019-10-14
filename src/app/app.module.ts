@@ -14,6 +14,7 @@ import { FormComponent } from "./components/launcher/form/form.component";
 import { SenderChatBubbleComponent } from "./components/chatbot/chat-body/sender-chat-bubble/sender-chat-bubble.component";
 import { ReceiverChatBubbleComponent } from "./components/chatbot/chat-body/receiver-chat-bubble/receiver-chat-bubble.component";
 import { HttpClientModule } from '@angular/common/http';  
+import { DialogflowApiKeyServices } from './services/dialogflow.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReceiverChatBubbleComponent
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule,HttpClientModule],
-  providers: [],
+  providers: [DialogflowApiKeyServices],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
